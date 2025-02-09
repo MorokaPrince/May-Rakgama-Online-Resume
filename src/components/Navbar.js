@@ -7,8 +7,6 @@ import {
   faGraduationCap, 
   faCertificate,
   faLaptopCode,
-  faTrophy,
-  faComments,
   faEnvelope,
   faBars,
   faTimes
@@ -41,8 +39,6 @@ const Navbar = () => {
     { path: '/education', icon: faGraduationCap, text: 'Education' },
     { path: '/certificates', icon: faCertificate, text: 'Certificates' },
     { path: '/projects', icon: faLaptopCode, text: 'Projects' },
-    { path: '/achievements', icon: faTrophy, text: 'Achievements' },
-    { path: '/testimonials', icon: faComments, text: 'Testimonials' },
     { path: '/contact', icon: faEnvelope, text: 'Contact' }
   ];
 

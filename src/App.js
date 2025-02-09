@@ -6,11 +6,8 @@ import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import Certificates from "./pages/Certificates";
 import Projects from "./pages/Projects";
-import Achievements from "./pages/Achievements";
-import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
-import Upload from "./pages/Upload";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -125,23 +122,6 @@ const profileData = {
       technologies: ["React", "Redux", "Firebase", "Stripe API"],
       link: "https://github.com/mayrakgama/ecommerce-platform"
     }
-  ],
-  achievements: [
-    "Hackathon Winner - 2023",
-    "Best Web Developer Award - 2022",
-    "Published an article on React Optimization Techniques"
-  ],
-  testimonials: [
-    {
-      name: "John Doe",
-      role: "Senior Developer",
-      feedback: "May is an exceptional developer with great problem-solving skills."
-    },
-    {
-      name: "Jane Smith",
-      role: "Project Manager",
-      feedback: "May's dedication and technical expertise have been instrumental in our project's success."
-    }
   ]
 };
 
@@ -158,9 +138,6 @@ function App() {
             <Route path="/education" element={<Education education={profileData.education} />} />
             <Route path="/certificates" element={<Certificates certificates={profileData.certifications} />} />
             <Route path="/projects" element={<Projects projects={profileData.projects} />} />
-            <Route path="/achievements" element={<Achievements achievements={profileData.achievements} />} />
-            <Route path="/testimonials" element={<Testimonials testimonials={profileData.testimonials} />} />
-            <Route path="/upload" element={<Upload />} />
             <Route path="/contact" element={<Contact profile={profileData} />} />
           </Routes>
         </main>
