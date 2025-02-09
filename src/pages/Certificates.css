@@ -1,0 +1,125 @@
+.certificates-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.certificates-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.certificates-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.certificates-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.certificate-content {
+  flex-grow: 1;
+}
+
+.certificate-content h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.certificate-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.certificate-details .issuer {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.certificate-details .date {
+  color: #6b7280;
+}
+
+.view-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-certificate:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+.view-certificate svg {
+  font-size: 0.875rem;
+}
+
+.certificates-footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificates-container {
+    padding: 1rem;
+  }
+
+  .certificates-header h1 {
+    font-size: 2rem;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card {
+    padding: 1.5rem;
+  }
+}

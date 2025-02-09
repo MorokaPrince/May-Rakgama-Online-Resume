@@ -1,0 +1,236 @@
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.experience-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--primary-color) 5%,
+    var(--primary-color) 95%,
+    transparent
+  );
+}
+
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  transform: translateX(2rem);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+  transform: translateX(-2rem);
+}
+
+.timeline-content {
+  width: calc(50% - 2rem);
+  position: relative;
+}
+
+/* Experience Card Styles */
+.experience-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.company-info h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.company-info h4 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.experience-details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.detail-item svg {
+  color: var(--primary-color);
+}
+
+.experience-description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.achievements-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.achievements-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.achievements-list li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: -1rem;
+}
+
+/* Footer Styles */
+.experience-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.experience-footer p {
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* Timeline Dots */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--primary-color);
+  border: 3px solid white;
+  border-radius: 50%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 0;
+  }
+
+  .timeline-content {
+    width: calc(100% - 2rem);
+    margin-left: 2rem !important;
+    transform: none !important;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 2rem;
+    transform: none;
+  }
+
+  .experience-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

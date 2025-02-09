@@ -1,0 +1,266 @@
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.education-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.education-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Timeline Layout */
+.education-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--primary-color) 5%,
+    var(--primary-color) 95%,
+    transparent
+  );
+}
+
+/* Education Card */
+.education-card {
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-icon {
+  position: absolute;
+  left: -48px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.education-content {
+  padding: 2rem;
+}
+
+.education-title {
+  margin-bottom: 1rem;
+}
+
+.education-title h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.institution {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.institution svg {
+  font-size: 1rem;
+}
+
+.education-period {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.education-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Achievements Section */
+.education-achievements {
+  margin-top: 1.5rem;
+}
+
+.education-achievements h4 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.education-achievements ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.education-achievements li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.education-achievements li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: -1rem;
+}
+
+/* Courses Grid */
+.education-courses {
+  margin-top: 1.5rem;
+}
+
+.education-courses h4 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-tag {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.course-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Footer Section */
+.education-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.education-quote {
+  margin-bottom: 3rem;
+}
+
+.education-quote blockquote {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.education-quote cite {
+  color: #6b7280;
+}
+
+.education-cta {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.education-cta p {
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 1rem;
+  }
+
+  .education-header h1 {
+    font-size: 2rem;
+  }
+
+  .education-timeline::before {
+    left: 24px;
+  }
+
+  .education-card {
+    margin-left: 60px;
+  }
+
+  .education-icon {
+    left: -36px;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .education-content {
+    padding: 1.5rem;
+  }
+
+  .courses-grid {
+    justify-content: center;
+  }
+}
