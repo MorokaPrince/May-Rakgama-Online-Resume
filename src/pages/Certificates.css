@@ -1,12 +1,12 @@
 .certificates-container {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
   background: 
-    linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)),
-    url('https://i.pinimg.com/originals/f5/36/01/f53601133f185e30a6703aef4a9b8abf.gif') center/cover fixed;
+    linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.92)),
+    url('https://cdn.dribbble.com/users/214929/screenshots/4366947/dribbble-shot_6.gif') center/cover fixed;
 }
 
 .certificates-container::before {
@@ -20,136 +20,82 @@
     radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 .certificates-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  box-shadow: 
-    0 8px 32px rgba(31, 38, 135, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
-  overflow: hidden;
-}
-
-.certificates-header::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
-  animation: rotate 20s linear infinite;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .certificates-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  background: linear-gradient(120deg, #6366f1, #a855f7, #ec4899);
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
 }
 
 .certificates-header p {
-  font-size: 1.2rem;
-  color: #64748b;
-  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
 }
 
 .upload-section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .upload-area {
-  border: 2px dashed #a855f7;
-  border-radius: 20px;
-  padding: 3rem 2rem;
+  border: 2px dashed var(--primary-color);
+  border-radius: 16px;
+  padding: 2rem;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   backdrop-filter: blur(8px);
 }
 
-.upload-area::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.upload-area:hover::before {
-  left: 100%;
-}
-
 .upload-area.drag-active {
-  border-color: #6366f1;
+  border-color: var(--secondary-color);
   background: rgba(99, 102, 241, 0.1);
-  transform: scale(1.02);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transform: scale(1.01);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .upload-icon {
-  font-size: 3rem;
-  color: #6366f1;
-  margin-bottom: 1.5rem;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
   animation: float 6s ease-in-out infinite;
 }
 
 .upload-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(120deg, #6366f1, #a855f7);
+  background: var(--gradient-1);
   color: white;
-  border-radius: 12px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.upload-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.upload-button:hover::before {
-  left: 100%;
 }
 
 .upload-button:hover {
@@ -159,82 +105,62 @@
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .certificate-card {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
-  position: relative;
-  overflow: hidden;
-}
-
-.certificate-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: 0.5s;
-}
-
-.certificate-card:hover::before {
-  left: 100%;
+  height: auto;
+  min-height: 180px;
 }
 
 .certificate-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .certificate-icon {
-  font-size: 2.5rem;
-  background: linear-gradient(120deg, #6366f1, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem;
-  animation: float 6s ease-in-out infinite;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  background: var(--gradient-1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .certificate-content h3 {
-  font-size: 1.25rem;
-  color: #1e293b;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
 }
 
 .certificate-details {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.75rem;
 }
 
 .issuer {
-  color: #64748b;
+  color: var(--text-secondary);
   font-weight: 500;
   position: relative;
-  padding-left: 20px;
+  padding-left: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .issuer::before {
@@ -242,55 +168,31 @@
   position: absolute;
   left: 0;
   top: 50%;
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(120deg, #6366f1, #a855f7);
+  width: 4px;
+  height: 4px;
+  background: var(--gradient-1);
   border-radius: 50%;
   transform: translateY(-50%);
 }
 
 .date {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-weight: 500;
-}
-
-.view-certificate {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #6366f1;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.view-certificate::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(120deg, #6366f1, #a855f7);
-  transition: width 0.3s ease;
-}
-
-.view-certificate:hover::after {
-  width: 100%;
+  font-size: 0.9rem;
 }
 
 .certificate-preview {
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+  aspect-ratio: 16/9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-preview img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -299,47 +201,63 @@
   transform: scale(1.05);
 }
 
-.pdf-preview {
-  background: linear-gradient(120deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
-  padding: 3rem 2rem;
-  text-align: center;
-  color: #6366f1;
+.view-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.view-certificate:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.pdf-preview {
+  background: rgba(99, 102, 241, 0.1);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 1024px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .certificates-container {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .certificates-header h1 {
-    font-size: 2rem;
-  }
-
-  .certificates-grid {
-    grid-template-columns: 1fr;
+    font-size: 1.75rem;
   }
 
   .upload-area {
-    padding: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-grid {
+    gap: 1rem;
+  }
+  
+  .certificate-preview {
+    aspect-ratio: 16/10;
   }
 }
