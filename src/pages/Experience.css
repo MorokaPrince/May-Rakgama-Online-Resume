@@ -1,0 +1,363 @@
+@import './shared-styles.css';
+
+.experience-container {
+  composes: page-base;
+  padding: 4rem 2rem;
+}
+
+.experience-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    rgba(14, 165, 233, 0.1), 
+    rgba(56, 189, 248, 0.1));
+  pointer-events: none;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header-decoration {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.experience-card {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0ea5e9;
+}
+
+.card-header {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-content h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #e2e8f0;
+}
+
+.company-info {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+}
+
+.company-info .icon-gradient {
+  font-size: 0.7rem;
+}
+
+.employment-type {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(14, 165, 233, 0.2);
+  color: #38bdf8;
+}
+
+.job-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.3rem;
+}
+
+.job-meta .icon-gradient {
+  font-size: 0.7rem;
+}
+
+.icon-gradient {
+  color: #38bdf8;
+}
+
+.card-details {
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.responsibilities {
+  margin-top: 0.8rem;
+}
+
+.responsibilities h4 {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.responsibility-item {
+  margin-bottom: 0.5rem;
+}
+
+.responsibility-item h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.responsibility-item p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.skills-section {
+  margin-top: 0.8rem;
+}
+
+.skills-section h4 {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  background: rgba(14, 165, 233, 0.2);
+  color: #38bdf8;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(14, 165, 233, 0.3);
+  transform: translateY(-2px);
+}
+
+.expand-icon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  color: #38bdf8;
+}
+
+.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Achievements section */
+.achievements {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.achievements-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.achievement-item svg {
+  color: #10b981; /* Success green color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 2rem 1rem;
+  }
+
+  .experience-header h1 {
+    font-size: 2rem;
+  }
+
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .company-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-card {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid rgba(14, 165, 233, 0.3);
+    padding-top: 1.5rem;
+  }
+
+  .experience-card::before {
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%);
+  }
+
+  .job-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Add custom scrollbar for browsers that support it */
+.experience-grid {
+  scrollbar-color: rgba(99, 102, 241, 0.5) transparent;
+  scrollbar-width: thin;
+}
+
+/* Optional: Add scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 200px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 2px;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add scroll buttons animation */
+@keyframes bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes techOverlay {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.7; }
+}
+
+.current-client-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+}
+
+.current-client-info img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.current-client-info span {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
+.current-client-label {
+  font-size: 0.8em;
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

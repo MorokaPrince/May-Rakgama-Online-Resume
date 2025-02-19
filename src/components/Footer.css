@@ -1,0 +1,54 @@
+.footer {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.made-with {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.heart-icon {
+  color: #ec4899;
+  margin: 0 0.3rem;
+  animation: pulse 1.5s ease infinite;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+  }
+  
+  .footer-content {
+    padding: 0 1rem;
+  }
+}

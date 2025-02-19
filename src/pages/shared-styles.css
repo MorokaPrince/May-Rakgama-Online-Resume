@@ -1,0 +1,516 @@
+/* Common styles to be imported in all section CSS files */
+
+.section-container {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(2, 6, 23, 0.95));
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: var(--gradient-tech);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--card-border-radius);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: var(--gradient-tech);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.meta-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Base container styling for all professional sections */
+.projects-container,
+.experience-container,
+.skills-container,
+.education-container,
+.certificates-container {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.9));
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common background pattern for all sections */
+.projects-container::before,
+.experience-container::before,
+.skills-container::before,
+.education-container::before,
+.certificates-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.1), transparent 40%);
+  pointer-events: none;
+}
+
+/* Header styling for all sections */
+.projects-container h1,
+.experience-container h1,
+.skills-container h1,
+.education-container h1,
+.certificates-container h1 {
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fff, #e2e8f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Description text for all sections */
+.projects-container > p,
+.experience-container > p,
+.skills-container > p,
+.education-container > p,
+.certificates-container > p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Card styling for all sections */
+.project-card,
+.experience-card,
+.skill-card,
+.education-card,
+.certificate-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Card titles */
+.project-card h3,
+.experience-card h3,
+.skill-card h3,
+.education-card h3,
+.certificate-card h3 {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Card description text */
+.project-card p,
+.experience-card p,
+.skill-card p,
+.education-card p,
+.certificate-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Tags styling */
+.tag {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Meta information styling */
+.meta-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Common background styling for all pages */
+.page-base {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.85),
+    rgba(2, 6, 23, 0.95)
+  ),
+  url('https://th.bing.com/th/id/R.1ca74946ed770bb635e4de4711bd861f?rik=EyjadxYAojqf8A&pid=ImgRaw&r=0');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(14, 165, 233, 0.1),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(56, 189, 248, 0.05),
+      transparent 40%
+    );
+  pointer-events: none;
+}
+
+/* Advanced Transition Effects */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Enhanced Hover Effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Floating Animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Gradient Border Animation */
+.gradient-border-animation {
+  position: relative;
+  background: var(--glass-bg);
+}
+
+.gradient-border-animation::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    var(--primary-color), 
+    var(--secondary-color), 
+    var(--accent-color));
+  filter: blur(5px);
+  z-index: -1;
+  animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% { filter: blur(5px) hue-rotate(0deg); }
+  100% { filter: blur(5px) hue-rotate(360deg); }
+}
+
+/* Shimmer Effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* Particle Background */
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* Neo-Brutalism Accents */
+.neo-brutal {
+  border: 3px solid var(--text-primary);
+  box-shadow: 4px 4px 0 var(--text-primary);
+  transform: translate(-2px, -2px);
+  transition: all 0.2s ease;
+}
+
+.neo-brutal:hover {
+  transform: translate(0, 0);
+  box-shadow: 0px 0px 0 var(--text-primary);
+}
+
+/* Glass Card Enhancement */
+.glass-card-enhanced {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Magnetic Effect */
+.magnetic {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Cyberpunk Accent */
+.cyber-accent {
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  padding: 2px;
+}
+
+/* Retro Grid Background */
+.retro-grid {
+  background-image: 
+    linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: gridMove 15s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 20px; }
+}
+
+/* Text Glitch Effect */
+.glitch-text {
+  position: relative;
+  animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Spotlight Hover */
+.spotlight-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.spotlight-hover:hover::before {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projects-container h1,
+  .experience-container h1,
+  .skills-container h1,
+  .education-container h1,
+  .certificates-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-card h3,
+  .experience-card h3,
+  .skill-card h3,
+  .education-card h3,
+  .certificate-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container,
+  .experience-container,
+  .skills-container,
+  .education-container,
+  .certificates-container {
+    padding: 1rem;
+  }
+
+  .projects-container h1,
+  .experience-container h1,
+  .skills-container h1,
+  .education-container h1,
+  .certificates-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-card,
+  .experience-card,
+  .skill-card,
+  .education-card,
+  .certificate-card {
+    padding: 1rem;
+  }
+}
